@@ -51,6 +51,7 @@ fi
 
 if [ ${stage} -le 2 ] && [ ${stop_stage} -ge 2 ]; then
     log "stage 2: Data Preparation"
+    mkdir -p data/all_vi
     local/move_raw_to_data_dst.py ${VOXFORGE}/${lang}/extracted data/all_vi
 fi
 
