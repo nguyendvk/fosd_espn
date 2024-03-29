@@ -43,7 +43,7 @@ if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then
     if [ ! -e "${VOXFORGE}/${lang}/extracted" ]; then
         log "stage 1: Download data to ${VOXFORGE}"
         local/getdata.sh "${VOXFORGE}/${lang}"
-    se
+    else
         log "stage 1: ${VOXFORGE}/${lang}/extracted is already existing. Skip data downloading"
     fi
 fi
